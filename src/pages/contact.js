@@ -20,22 +20,22 @@ const ContactPage = () => (
             <Container className="" style={{width:`80%`}}>
             <Row>
                 <Col>
-                    <p>（※このサンプルサイトで送信機能は使用できません）</p>
-                    <Form>
-                    <Form.Group controlId="formBasicText">
-                        <Form.Control type="text" as="input" placeholder="お名前" name="name" required />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Control type="email" as="input" placeholder="メールアドレス" name="email" required />
-                    </Form.Group>
-                    <Form.Group controlId="formTextarea">
-                        <Form.Control as="textarea" placeholder="メッセージ" rows="3" name="message" required />
-                    </Form.Group>
-                    <Form.Group>
-                        <Form.File id="FormControlFile" name="file" lang="ja" label="ファイル添付" />
-                    </Form.Group>
-                        <Button variant="light" type="submit">送信</Button>
-                    </Form>
+                <Form method="post" name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
+                <Form.Group controlId="formBasicText">
+                    <Form.Control type="text" as="input" placeholder="お名前" name="name" required />
+                </Form.Group>
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Control type="email" as="input" placeholder="メールアドレス" name="email" required />
+                </Form.Group>
+                <Form.Group controlId="formTextarea">
+                    <Form.Control as="textarea" placeholder="メッセージ" rows="3" name="message" required />
+                </Form.Group>
+                <Form.Group>
+                    <Form.File id="FormControlFile" name="file" lang="ja" label="ファイル添付" />
+                </Form.Group>
+                    <Button variant="light" type="submit">送信</Button>
+                </Form>
                 </Col>
             </Row>
             </Container>
