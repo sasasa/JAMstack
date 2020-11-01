@@ -3,8 +3,30 @@ module.exports = {
     title: `Gatsby Basic Bootstrap Starter`,
     description: `A simple Gatsby starter leveraging react-bootstrap and little else.`,
     author: `@mik3y`,
+    siteUrl: `https://zealous-hodgkin-2e0be7.netlify.app`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://zealous-hodgkin-2e0be7.netlify.app`,
+        stripQueryString: true,
+      },
+    },
+    { 
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://zealous-hodgkin-2e0be7.netlify.app',
+        sitemap: 'https://zealous-hodgkin-2e0be7.netlify.app/sitemap.xml',
+        policy: [
+          { 
+            userAgent: '*',
+            allow: '/'
+          }
+        ]
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
