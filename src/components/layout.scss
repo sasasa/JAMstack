@@ -1,14 +1,25 @@
-// Main scss.
-
-// Import your own bootstrap customizations as variables first.
-// @import "./_variables.scss"
-
-// Import bootstrap and bootswatch. Replace "superhero" below with any
-// other bootswatch theme name (see https://bootswatch.com/), or remove
-// the bootswatch lines for default theme.
-
-// @import "~bootswatch/dist/superhero/variables";
+@import "~bootswatch/dist/cosmo/variables";
 @import "~bootstrap/scss/bootstrap";
-// @import "~bootswatch/dist/superhero/bootswatch";
+@import "~bootswatch/dist/cosmo/bootswatch";
 
-// Add other customizations below.
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html { 
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ページ 共通 CSS */
+.title-obi {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 0.5rem;
+}
+
+.space { 
+  max-width: 960px;
+  padding-top: 2rem;
+}
+
+.h1-font {
+  font-size: 1.2rem;
+}
