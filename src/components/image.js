@@ -32,9 +32,9 @@ const Image = (props) => (
     */
     render={(data) => {
       const image = data.images.edges.find(n => {
-        return n.node.relativePath.includes(props.filename);
+        return n.node.relativePath.includes(props.file);
       });
-      if (!image) { return null; }
+      if (!image) { return "hogehoge"; }
       //const imageSizes = image.node.childImageSharp.sizes; ←サイズFIXしたい時
       return (
         /*<Img alt={props.alt} sizes={imageSizes} /> ←サイズFIXしたい時 */
